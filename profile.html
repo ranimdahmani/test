@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marketplace - Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main>
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="reservation.html">Reserve Study Space</a>
+  <a href="profile.html">Profile</a>
+</nav>
+<!-- ================= AUTH ================= -->
+<div id="authSection" class="auth-box">
+
+  <h2>Welcome Back</h2>
+
+  <input id="authUser" placeholder="Username" name="username">
+  <input id="authPass" type="password" placeholder="Password" name="username">
+
+  <button onclick="signup()">Sign Up</button>
+  <button onclick="login()">Login</button>
+
+</div>
+
+<!-- ================= PROFILE DASHBOARD ================= -->
+<div id="profileSection" style="display:none;" class="profile-box">
+
+  <h2 id="profileName"></h2>
+  <p id="profileEmail"></p>
+
+  <button onclick="logout()">Logout</button>
+
+  <hr>
+
+  <h3>🛒 My Items for Sale</h3>
+<div id="mySellItems"></div>
+
+
+  <h3>🧾 My Purchases</h3>
+  <div id="myPurchases" class="grid"></div>
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

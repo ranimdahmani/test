@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Marketplace - Auth</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<main class="auth-page">
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="reservation.html">Reserve Study Space</a>
+  <a href="profile.html">Profile</a>
+</nav>
+  <!-- BRAND -->
+  <div class="auth-header">
+    <h1>Smart Student Marketplace</h1>
+    <p>Login or create an account to continue</p>
+  </div>
+
+  <!-- AUTH BOX -->
+  <div class="auth-box">
+
+    <h2>Welcome</h2>
+
+    <input id="authUser" type="text" placeholder="Username" name="username">
+    <input id="authPass" type="password" placeholder="Password" name="password">
+
+    <div class="auth-buttons">
+      <button onclick="signup()">Sign Up</button>
+      <button onclick="login()">Login</button>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

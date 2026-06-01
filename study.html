@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="reservation.html">Reserve Study Space</a>
+  <a href="profile.html">Profile</a>
+</nav>
+</body>
+<h2>Study Rooms</h2>
+
+<div id="rooms"></div>
+
+<script>
+function loadRooms() {
+  const rooms = ["A1", "A2", "A3"];
+  const container = document.getElementById("rooms");
+
+  let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
+
+  container.innerHTML = "";
+
+  rooms.forEach(room => {
+
+    let booked = reservations.find(r => r.room === room);
+
+    container.innerHTML += `
+      <div class="card">
+        <h3>${room}</h3>
+
+        ${booked
+          ? `<p style="color:red;">NOT AVAILABLE</p>
+             <p>Time: ${booked.time}</p>`
+          : `<p style="color:green;">AVAILABLE</p>`
+        }
+
+      </div>
+    `;
+  });
+}
+
+loadRooms();
+</script>

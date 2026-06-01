@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<nav>
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="reservation.html">Reserve Study Space</a>
+  <a href="profile.html">Profile</a>
+</nav>
+
+<h2>Reserve a Study Room</h2>
+
+<form id="resForm">
+
+  <select id="room">
+    <option value="A1">A1</option>
+    <option value="A2">A2</option>
+    <option value="A3">A3</option>
+  </select>
+
+  <input type="time" id="time" required>
+
+  <button type="submit">Reserve</button>
+
+</form>
+
+<p id="msg"></p>
+
+<script src="reservation.js"></script>
+</html>
